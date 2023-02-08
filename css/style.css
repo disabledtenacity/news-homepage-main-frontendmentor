@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    /* ======== Fonts ======== */
+      /* Font sizes */
+    --fs-h1: 4.5rem; /* 72 */
+    --fs-h2: 3rem;  /* 48 */
+    --fs-h3: 1.5rem; /* 24 */
+    --fs-p: 1rem; /* 16 */
+    --fs-nav: 0.88rem;
+    /* Font weights */
+    --fw-800: font-weight: 800;
+    --fw-700: font-weight: 700;
+    --fw-400: font-weight: 400;
+    /* ======== Colors ======== */
+    /* Primary colors */
+    --clr-primary-100: hsl(35, 77%, 62%);
+    --clr-primary-200: hsl(5, 85%, 63%);
+    /* Neutral colors */
+    --clr-neutral-100: hsl(36, 100%, 99%);
+    --clr-neutral-200: hsl(233, 8%, 79%);
+    --clr-neutral-300: hsl(236, 13%, 42%);
+    --clr-neutral-400: hsl(240, 100%, 5%);
+    /* ========  */
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: var(--fs-100);
+    background-color: var(--clr-neutral-100);
+}
+
+h1{
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-800);
+}
+
+h2{
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-700);
+}
+
+h3{
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-700);
+}
+
+p{
+    font-size: var(--fs-p);
+    font-weight: var(--fw-400);
+}
+
+a{
+    text-decoration: none;
+}
+
+#container{
+    display: grid;
+    margin: 0 auto;
+    height: 100vh;
+    gap: 1.5rem;
+    grid-template-areas:
+    "header header" 
+    "main sidebar"
+    "cards cards";
+    grid-template-columns: 9fr 3fr;
+    grid-template-rows: 1fr 8fr 3fr;
+}
+
+aside,
+article{
+    color: var(--clr-neutral-200);
+    background-color: var(--clr-neutral-300);
+}
+
+header{
+    grid-area: header;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--fs-nav);
+    color: var(--clr-neutral-300);
+}
+
+main{
+    grid-area: main;
+}
+
+aside{
+    grid-area: sidebar;
+    background-color: var(--clr-neutral-400);
+}
+
+article{
+    grid-area: cards;
+}
+
+a{
+    color: var(--clr-neutral-300);
+}
+
+#attribution { font-size: 11px; text-align: center; }
+#attribution a { color: hsl(228, 45%, 44%); }
