@@ -1,4 +1,6 @@
-*{
+*,
+*::before,
+*::after{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -11,8 +13,9 @@
     --fs-h2: 3rem;  /* 48 */
     --fs-h3: 1.5rem; /* 24 */
     --fs-p: 1rem; /* 16 */
-    --fs-nav: 0.88rem;
+    --fs-nav: 0.88rem; /* 14 */
     /* Font weights */
+    --fw-900: font-weight: 900;
     --fw-800: font-weight: 800;
     --fw-700: font-weight: 700;
     --fw-400: font-weight: 400;
@@ -36,7 +39,7 @@ body{
 
 h1{
     font-size: var(--fs-h1);
-    font-weight: var(--fw-800);
+    font-weight: var(--fw-900);
 }
 
 h2{
@@ -63,19 +66,15 @@ a{
     margin: 0 auto;
     height: 100vh;
     gap: 1.5rem;
+    max-width: 90rem;
+    justify-content: center;
     grid-template-areas:
     "header header" 
     "main sidebar"
     "cards cards";
     grid-template-columns: 9fr 3fr;
     grid-template-rows: 1fr 8fr 3fr;
-}
-
-aside,
-article{
-    color: var(--clr-neutral-200);
-    background-color: var(--clr-neutral-300);
-}
+} 
 
 header{
     grid-area: header;
@@ -94,17 +93,40 @@ header{
     color: var(--clr-neutral-300);
 }
 
+.nav_buttons{
+    margin-left: 2.63rem;
+}
+
+.nav_buttons:hover{
+    color: var(--clr-primary-200);
+}
+
 main{
     grid-area: main;
 }
 
+#flex-main{
+    display: flex;
+    padding: 0 1.5rem ;
+}
+
+
 aside{
     grid-area: sidebar;
     background-color: var(--clr-neutral-400);
+    color: var(--clr-neutral-200);
 }
 
 article{
     grid-area: cards;
+}
+
+#article-cards{
+    display: flex;
+}
+
+.article-flex{
+    display: flex;
 }
 
 a{

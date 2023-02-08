@@ -4,3 +4,5 @@ h2 2.5 rem
 h3 1.8 rem
 p 1.6 rem
 nav 1.4 rem
+
+1460 x 600
