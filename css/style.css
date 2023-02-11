@@ -1,3 +1,15 @@
+/* ======== Table of Contents ========
+1. Global Styles
+2. Layout 
+    2.1 Grid
+    2.2 Flex
+3. Typography
+4. Conponents
+    4.1 Buttons
+    4.2 Cards */
+
+
+    /* ======== Global Styles ======== */
 *,
 *::before,
 *::after{
@@ -36,31 +48,9 @@ body{
     background-color: var(--clr-neutral-100);
 }
 
-h1{
-    font-size: var(--fs-h1);
-    font-weight: var(--fw-800);
-}
+/* ======== Layout ======== */
 
-h2
-    font-size: var(--fs-h2)
-    font-weight: var(--fw-700);
-    
-    
-h3{
-    font-size: var(--fs-h3);
-    font-weight: var(--fw-700);
-}
-
-p{
-    font-size: var(--fs-p);
-    font-weight: var(--fw-400);
-    color: var(--clr-neutral-300);
-    line-height: 1.75rem;
-}
-
-a{
-    text-decoration: none;
-}
+/* Grid */
 
 #container{
     margin: 0 auto;
@@ -85,12 +75,77 @@ header{
     align-items: center;
 }
 
+main{
+    grid-area: main;
+}
+
+
+aside{
+    grid-area: sidebar;
+    background-color: var(--clr-neutral-400);
+    color: var(--clr-neutral-200);
+}
+
+article{
+    grid-area: cards;
+}
+
+/* Flexbox */
+
+#flex-main{
+    display: flex;
+    padding: 0 1.5rem ;
+}
+
+#article-cards{
+    display: flex;
+}
+
+.article-flex{
+    display: flex;
+}
+
+
+/* ======== Typography ======== */
+
+h1{
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-800);
+    color: var(--clr-neutral-400);
+}
+
+h2{
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-700);
+}
+    
+h3{
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-700);
+    color: var(--clr-neutral-400);
+}
+
+p{
+    font-size: var(--fs-p);
+    font-weight: var(--fw-400);
+    color: var(--clr-neutral-300);
+    line-height: 1.75rem;
+}
+
+/* ======== Conponents ======== */
+
 #navbar{
     display: flex;
     list-style-type: none;
     justify-content: space-between;
     align-items: center;
     font-size: var(--fs-nav);
+    color: var(--clr-neutral-300);
+}
+/* Buttons */
+
+a{
+    text-decoration: none;
     color: var(--clr-neutral-300);
 }
 
@@ -102,52 +157,33 @@ header{
     color: var(--clr-primary-200);
 }
 
-main{
-    grid-area: main;
+#article-button{
+    background-color: var(--clr-primary-200);
+    color: var(--clr-neutral-100);
+    padding: 1rem 3.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
 }
 
-#flex-main{
-    display: flex;
-    padding: 0 1.5rem ;
-}
+/* Cards */
 
 #article-summary{
-    color: ;
-    margin: ;
+    color: var(--clr-neutral-300);
+    margin: 3rem 0;
+    line-height: 2rem;
+    max-width: 40rem;
 }
 
-#article-button{
-
-}
-
-aside{
-    grid-area: sidebar;
-    background-color: var(--clr-neutral-400);
-    color: var(--clr-neutral-200);
-}
 
 aside h2{
     color: var(--clr-primary-100);
 }
 
-article{
-    grid-area: cards;
-}
-
-#article-cards{
-    display: flex;
-}
-
-.article-flex{
-    display: flex;
-}
-
-a{
-    color: var(--clr-neutral-300);
-}
 
 @media screen {max-width: ;
-    
+
 }
 
 #attribution { font-size: 11px; text-align: center; }
